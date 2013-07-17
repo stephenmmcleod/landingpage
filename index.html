@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Stephen McLeod, and stuff.</title>
+	<meta name="description" content="blah blah blah"> 
+	<meta name="author" content="Stephen McLeod">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/instafeed.min.js"></script>
+	<script type="text/javascript">
+	    var feed = new Instafeed({
+			get: 'user',
+			userId: 18232207,
+		    accessToken: '18232207.467ede5.c94c642c8f9a4022ad2080f639771186',
+			link: 'true',
+			clientId: '821a0b28e50d4b02af5e846b42fa4601',
+			limit: '60'
+	    });
+	    feed.run();
+	</script>
+</head>  
+<body>
+	<header>
+		<h1 class="gradient">Hello There.</h1>
+		<p>I am Stephen McLeod, I make <a class="gradient" href="http://vsvsvs.org/" target="_blank">art</a> and <a class="gradient" target="_blank" href="http://island-dweller.com/">music</a> and <a target="_blank" class="gradient" href="https://github.com/stephenmmcleod">code</a>, forever trying to keep all it interesting.  (life that is)</p>
+	</header>
+	
+    <div id="instafeed"></div> 
+</body>
+</html>                    
