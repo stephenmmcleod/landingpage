@@ -3,7 +3,19 @@
 	background-color: #eee;
 }
 
+.right {
+	width: 80%;
+	position: absolute;
+	bottom: 40%;
+	right: 0;
+	text-align: center;
+	font-size: 45%;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+
 header {
+	position: relative;
 	overflow: visible;
 	margin: auto;
 	width: 300px;
