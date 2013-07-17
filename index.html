@@ -22,14 +22,25 @@
 			limit: '60'
 	    });
 	    feed.run();
+
+	    jQuery(document).ready(function($) {
+	    	$("#bump").click(function(e){
+	    		e.preventDefault();
+	    		// console.log("asdf");
+	    		$("#instafeed").toggle();
+
+	    	});
+	    });
 	</script>
 </head>  
-<body>
+<body class="bg-body" style="background-image: url(images/islands.jpeg);">
 	<header>
-		<h1 class="gradient">Hello There.</h1>
-		<p>I am Stephen McLeod, I make <a class="gradient" href="http://vsvsvs.org/" target="_blank">art</a> and <a class="gradient" target="_blank" href="http://island-dweller.com/">music</a> and <a target="_blank" class="gradient" href="https://github.com/stephenmmcleod">code</a>, forever trying to keep all it interesting.  (life that is)</p>
+		<a class="gradient" href="http://vsvsvs.org/" target="_blank">art</a> <br />
+		<a class="gradient" target="_blank" href="http://island-dweller.com/">music</a> <br />
+		<a target="_blank" class="gradient" href="https://github.com/stephenmmcleod">code</a><br />
+		
 	</header>
 	
-    <div id="instafeed"></div> 
+    <div  id="instafeed"></div> 
 </body>
 </html>                    
