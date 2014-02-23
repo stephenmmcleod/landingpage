@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -17,33 +18,47 @@
 			get: 'user',
 			userId: 18232207,
 		    accessToken: '18232207.467ede5.c94c642c8f9a4022ad2080f639771186',
-			link: 'true',
+			// link: 'true',
 			clientId: '821a0b28e50d4b02af5e846b42fa4601',
-			limit: '60'
+			limit: '60',
+			after: function() {var images = $("#instafeed a").fancybox()},
+			template: '<a rel="gallery" class="fancybox"  href="{{link}}"><img src="{{image}}" /></a>',
+			
+			resolution: 'standard_resolution'
 	    });
 	    feed.run();
 
 	    jQuery(document).ready(function($) {
 	    	$("#bump").click(function(e){
 	    		e.preventDefault();
-	    		// console.log("asdf");
 	    		$("#instafeed").toggle();
 
 	    	});
+	    	// $(".fancybox").fancybox();
 	    });
 	</script>
+	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.5">
+	</script>
+
+	<script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
 </head>  
 <body class="bg-body" >
 	<header>
-		<div class="right">
+		
+		<div class="nav">
+			<a class="gradient" href="http://vsvsvs.org/" target="_blank">art</a>
+			<a class="gradient-green" target="_blank" href="https://soundcloud.com/island-dweller/">music</a> 
+			<a target="_blank" class="gradient" href="https://github.com/stephenmmcleod">code</a>
+			<a target="_blank" class="gradient-green" href="http://design.stephenmmcleod.com">design</a>
+		</div>
+		<div class="address">
 			stephen [at] vsvsvs [dot] org
 		</div>
-		<a class="gradient" href="http://vsvsvs.org/" target="_blank">art</a> <br />
-		<a class="gradient" target="_blank" href="http://island-dweller.com/">music</a> <br />
-		<a target="_blank" class="gradient" href="https://github.com/stephenmmcleod">code</a><br />
-
 	</header>
-	
     <div  id="instafeed"></div> 
+
 </body>
 </html>                    

@@ -1,45 +1,81 @@
-.bg-body {
-	/*style="background-image: url(images/islands.jpeg);"*/
-	background-color: #eee;
+body {
+    margin: 0;
 }
 
-.right {
-	width: 80%;
-	position: absolute;
-	bottom: 40%;
-	right: 0;
-	text-align: center;
-	font-size: 45%;
-	vertical-align: middle;
-	text-transform: uppercase;
+.bg-body {
+	background-color: #eee;
 }
 
 header {
 	position: relative;
 	overflow: visible;
 	margin: auto;
-	width: 300px;
 	font-family: sans-serif;
 	font-size: 1.3em;	
 	background: #fff;
 	padding: 30px;
-	margin-top: 30px;
+	
 
 	-webkit-transition: width 1s ease-in-out,margin .25s ease-in-out;
     -moz-transition: width 1s ease-in-out,margin .25s ease-in-out;
     transition: width 1s ease-in-out,margin .25s ease-in-out;
 }
 
+.address {
+    font-size: 65%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+.nav {
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+}
+
+.nav a {
+    text-transform: uppercase;
+    width: 130px;
+    padding: 0 10px;
+    height: 52px;
+    line-height: 52px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav a:last-child {
+    border: none;
+}
+
 .gradient, .gradient-small {
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#17c4de), color-stop(25%,#c800c8), color-stop(50%,#17c4de), color-stop(75%,#C800C8), color-stop(100%,#17c4de));
+    /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#83C400), color-stop(25%,#97C43B), color-stop(50%,#507800), color-stop(75%,#6D8E2B), color-stop(100%,#2E4500));*/
 	-webkit-background-size: 800px 1px;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	-webkit-animation: gradient_pan 20s infinite linear;
+	-webkit-animation: gradient_pan 2s infinite linear;
 	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
 	
 }
+
+.gradient-green {
+    /*color: #000;*/
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c800c8), color-stop(25%,#17c4de), color-stop(50%,#C800C8), color-stop(75%,#17c4de), color-stop(100%,#c800c8));
+    /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#83C400), color-stop(25%,#97C43B), color-stop(50%,#507800), color-stop(75%,#6D8E2B), color-stop(100%,#2E4500));*/
+    -webkit-background-size: 800px 1px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: gradient_pan 3s infinite linear;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
 @-webkit-keyframes gradient_pan {
     0% {
         background-position: left bottom;
@@ -49,32 +85,24 @@ header {
     }
 }
 
-.gradient-small {
-	-webkit-background-size: 300px 1px;
-}
+
+
+
 
 #instafeed {
     overflow: hidden;
     zoom: 1;
-    width: 300px;
-    max-width: 95%;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 0px auto;
     -webkit-transition: width 1s ease-in-out,margin .25s ease-in-out;
     -moz-transition: width 1s ease-in-out,margin .25s ease-in-out;
     transition: width 1s ease-in-out,margin .25s ease-in-out;
 }
 
-#gradient a {
-	color: #000;
-}
-
 #instafeed a {
     float: left;
-}
-
-#instafeed a:hover img {
-    -webkit-transform: scale .8;
-    transform: scale .8;
+    display: block;
+    width: 100%;
 }
 
 #instafeed img {
@@ -84,24 +112,21 @@ header {
 
 @media screen and (min-width:700px) {
     #instafeed {
-        width: 600px;
+        width: 660px;
     }
 
     header {
     	width: 600px;
     	font-size: 1.8em;
     }
-
-    #instafeed a {
-        display: block;
-        padding: 5px;
-        width: 290px;
-    };
+    .nav a {
+        border-right: 8px solid #efefef;
+    }
 }
 
 @media screen and (min-width:900px) {
     #instafeed {
-        width: 800px;
+        width: 860px;
     }
     header {
     	width: 800px;
@@ -109,24 +134,27 @@ header {
     }
 
     #instafeed a {
-        width: 190px;
+        max-width: 50%;
     };
+
 }
 
 @media screen and (min-width:1100px) {
     #instafeed {
-        width: 1000px;
+        width: 1060px;
     }
     header {
     	width: 1000px;
     	font-size: 2.8em;
-    };
-
+    }
+    .address {
+        font-size: 45%;
+    }
 }
 
 @media screen and (min-width:1300px) {
     #instafeed {
-        width: 1200px;
+        width: 1260px;
     }
     header {
     	width: 1200px;
