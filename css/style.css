@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 .bg-body {
@@ -10,7 +11,7 @@ header {
 	position: relative;
 	overflow: visible;
 	margin: auto;
-	font-family: sans-serif;
+	
 	font-size: 1.3em;	
 	background: #fff;
 	padding: 30px;
@@ -97,18 +98,30 @@ header {
     -webkit-transition: width 1s ease-in-out,margin .25s ease-in-out;
     -moz-transition: width 1s ease-in-out,margin .25s ease-in-out;
     transition: width 1s ease-in-out,margin .25s ease-in-out;
+    background: #FFF;
 }
 
-#instafeed a {
+#instafeed a, .more {
     float: left;
     display: block;
     width: 100%;
+    overflow: hidden;
 }
 
 #instafeed img {
     width: 100%;
     max-width: 100%;
 }
+
+.more {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 200px 0;
+    vertical-align: middle;
+}
+
 
 @media screen and (min-width:700px) {
     #instafeed {
@@ -121,6 +134,10 @@ header {
     }
     .nav a {
         border-right: 8px solid #efefef;
+    }
+    .more {
+        margin: 0;
+        line-height: 430px;
     }
 }
 
@@ -135,7 +152,13 @@ header {
 
     #instafeed a {
         max-width: 50%;
-    };
+        max-height: 50%;
+    }
+
+    .more {
+        font-size: 40px;
+        line-height: 430px;
+    }
 
 }
 
@@ -149,6 +172,9 @@ header {
     }
     .address {
         font-size: 45%;
+    }
+    .more {
+        line-height: 530px;
     }
 }
 

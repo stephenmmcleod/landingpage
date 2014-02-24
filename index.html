@@ -18,11 +18,16 @@
 			get: 'user',
 			userId: 18232207,
 		    accessToken: '18232207.467ede5.c94c642c8f9a4022ad2080f639771186',
-			// link: 'true',
 			clientId: '821a0b28e50d4b02af5e846b42fa4601',
 			limit: '60',
-			after: function() {var images = $("#instafeed a").fancybox()},
-			template: '<a rel="gallery" class="fancybox"  href="{{link}}"><img src="{{image}}" /></a>',
+			after: function() {
+				var images = $("#instafeed a").fancybox({
+					width: "616px",
+					height: "714px"
+				});
+				$("#instafeed").append("<a  class='more gradient' target='_blank' href='http://instagram.com/smmmmcleod'>click for more</a>");
+			},
+			template: '<a class="fancybox.iframe"  href="{{link}}embed"><img src="{{image}}" /></a>',
 			
 			resolution: 'standard_resolution'
 	    });
